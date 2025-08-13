@@ -3,5 +3,7 @@ h1 {
     font-family:Georgia; 
     color: powderblue;
 }
-img{align:center,
-    y=30}
+.center-image {
+  display: block;
+  margin: 30px auto 0;/
+}
