@@ -15,7 +15,11 @@ body{
   background-repeat: no-repeat; 
   background-position: center;   
 }
+a{
+ bottom:0
+ center:0
 
+ 
 p{
  font-size: 30px;
  color: white;
