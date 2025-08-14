@@ -8,6 +8,9 @@ img{
   display: block;
   margin: 60px auto 0;/
 }
-body{
- background:cv.jpeg;
+body {
+  background-image: url("cv.jpeg");
+  background-size: cover;        
+  background-repeat: no-repeat; 
+  background-position: center;   
 }
