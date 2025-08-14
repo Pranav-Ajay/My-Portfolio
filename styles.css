@@ -8,6 +8,7 @@ img{
   display: block;
 }
 body{
+  margin: 120px auto 0;/
   background-image: url("cv.jpeg");
   background-size: cover;        
   background-repeat: no-repeat; 
