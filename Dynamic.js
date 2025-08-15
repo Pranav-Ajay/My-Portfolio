@@ -25,7 +25,6 @@ btn.addEventListener("click", action);
 
 document.body.appendChild(btn);
 
-// Create an empty list to hold articles
 let articleList = document.createElement("ul");
 articleList.id = "articles";
 document.body.appendChild(articleList);
