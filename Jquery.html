@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Projects Gallery</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .gallery { display: flex; gap: 10px; }
+    .thumbnail { width: 100px; height: 100px; cursor: pointer; border: 2px solid #ccc; }
+    #main-display img { width: 300px; height: 200px; border: 3px solid #333; }
+    #main-display h2 { margin: 10px 0 5px; }
+    #main-display p { margin: 0; }
+  </style>
+</head>
+<body>
+
+  <h1>Projects Gallery</h1>
+
+  <!-- Main Display Area -->
+  <div id="main-display">
+    <h2>Click a project thumbnail</h2>
+    <img src="" alt="Project Image">
+    <p></p>
+  </div>
+
+  <hr>
+
+  <!-- Thumbnails -->
+  <div class="gallery">
+    <div class="thumbnail" 
+         data-title="Portfolio Website" 
+         data-description="A personal portfolio showcasing my work." 
+         data-image="https://via.placeholder.com/300x200/ff7f7f/000?text=Portfolio">
+      <img src="https://via.placeholder.com/100x100/ff7f7f/000?text=1" alt="">
+    </div>
+
+    <div class="thumbnail" 
+         data-title="E-Commerce App" 
+         data-description="An online store with cart and payment integration." 
+         data-image="https://via.placeholder.com/300x200/7fbfff/000?text=E-Commerce">
+      <img src="https://via.placeholder.com/100x100/7fbfff/000?text=2" alt="">
+    </div>
+
+    <div class="thumbnail" 
+         data-title="Blog Platform" 
+         data-description="A platform for posting and managing blog articles." 
+         data-image="https://via.placeholder.com/300x200/7fff7f/000?text=Blog">
+      <img src="https://via.placeholder.com/100x100/7fff7f/000?text=3" alt="">
+    </div>
+  </div>
+
+  <!-- jQuery Script -->
+  <script>
+    $(document).ready(function() {
+      $(".thumbnail").click(function() {
+        // Get data attributes from clicked thumbnail
+        var title = $(this).data("title");
+        var desc = $(this).data("description");
+        var img = $(this).data("image");
+
+        // Update main display area
+        $("#main-display h2").text(title);
+        $("#main-display p").text(desc);
+        $("#main-display img").attr("src", img);
+      });
+    });
+  </script>
+
+</body>
+</html>
