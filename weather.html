@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Live Weather Info</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eef3f8;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 { color: #333; }
+    .weather-container {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      max-width: 350px;
+      margin: 0 auto;
+    }
+    input {
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      width: 70%;
+    }
+    button {
+      padding: 8px 15px;
+      border: none;
+      background: #007BFF;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover { background: #0056b3; }
+    #weather-info {
+      margin-top: 20px;
+    }
+    #weather-info img {
+      vertical-align: middle;
+    }
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌦 Live Weather Information</h1>
+
+  <div class="weather-container">
+    <input type="text" id="city-input" placeholder="Enter city name">
+    <button id="get-weather">Get Weather</button>
+    <div id="weather-info"></div>
+    <div class="error" id="error-message"></div>
+  </div>
+
+  <script>
+    const apiKey = "YOUR_API_KEY"; // Replace with your OpenWeatherMap API key
+
+    document.getElementById("get-weather").addEventListener("click", () => {
+      const city = document.getElementById("city-input").value.trim();
+      const weatherInfo = document.getElementById("weather-info");
+      const errorMessage = document.getElementById("error-message");
+
+      weatherInfo.innerHTML = "";
+      errorMessage.textContent = "";
+
+      if (!city) {
+        errorMessage.textContent = "Please enter a city name.";
+        return;
+      }
+
+      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error("City not found");
+          }
+          return response.json();
+        })
+        .then(data => {
+          const cityName = data.name;
+          const temp = data.main.temp;
+          const description = data.weather[0].description;
+          const icon = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+
+          weatherInfo.innerHTML = `
+            <h2>${cityName}</h2>
+            <p><strong>Temperature:</strong> ${temp}°C</p>
+            <p><strong>Condition:</strong> ${description}</p>
+            <img src="${icon}" alt="${description}">
+          `;
+        })
+        .catch(error => {
+          errorMessage.textContent = error.message;
+        });
+    });
+  </script>
+
+</body>
+</html>
