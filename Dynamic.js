@@ -6,7 +6,7 @@ function action():
   });
   }
   
-btn=document.createlement("Button");
+let btn=document.createlement("Button");
 btn.textcontext="Retrieve";
 btn.addEventListener("click", action());
 
