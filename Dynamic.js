@@ -1,4 +1,4 @@
-def action():
+function action():
  {fetch("https://dev.to/api/articles?per_page=5")
   .then(response => response.json())
   .then(data => {
@@ -6,9 +6,11 @@ def action():
   });
   }
   
-btn=document.createlement("Button")
-btn.textcontext="Retrieve"
-btn.addEventListener("click", action())
+btn=document.createlement("Button");
+btn.textcontext="Retrieve";
+btn.addEventListener("click", action());
+
+document.body.appendChild(btn);
 
 
 
