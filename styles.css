@@ -16,7 +16,8 @@ body{
   background-position: center;   
 }
 a{
- bottom:0
+ position:fixed;
+ bottom:0;
  display: block;
  text-align: center;
 }
