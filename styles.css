@@ -11,10 +11,10 @@ img{
   right: 0;
 }
 body{
-  background-image: url("CVS.jpeg");
-  background-size: cover;        
-  background-repeat: no-repeat; 
-  background-position: center;   
+  margin: 0;                     
+  height: 100vh;                
+  background: url("yourimage.jpg") no-repeat center center fixed;
+  background-size: cover; 
 }
 a{
  position:fixed;
