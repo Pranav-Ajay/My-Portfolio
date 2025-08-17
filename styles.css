@@ -1,6 +1,6 @@
-body.e { 
-  margin-right:250px;
-  min-height: 100vh;          /* full viewport height */
+body.e {
+  margin: 0 250px;  /* 0 top/bottom, 250px left/right */
+  min-height: 100vh;
   background: url("CV.jpeg") no-repeat center center fixed;
   background-size: cover; 
   font-family: 'Pacifico', cursive;
