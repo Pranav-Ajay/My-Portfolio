@@ -5,7 +5,12 @@ body {
   background-size: cover; 
   font-family: Pacifico, cursive; /* fallback font */
 }
-
+body.e{
+  margin: 0; 
+  height: 100%;                
+  background: url("CV.jpeg") no-repeat center center fixed;
+  background-size: cover; 
+  font-family: Pacifico, cursive; }
 /* Common heading style */
 h1 {
   position: fixed;  
