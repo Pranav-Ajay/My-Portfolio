@@ -1,10 +1,10 @@
 body.e {
   margin: 0;      
   padding: 0;
-  display: flex;             /* enable flexbox */
-  justify-content: center;   /* center horizontally */
-  align-items: flex-start;   /* stick to the top */
-  min-height: 100vh;         /* full height */
+  display: flex;              /* enable flexbox */
+  justify-content: center;    /* center horizontally */
+  align-items: center;        /* center vertically */
+  min-height: 100vh;          /* full viewport height */
   background: url("CV.jpeg") no-repeat center center fixed;
   background-size: cover; 
   font-family: 'Pacifico', cursive;
