@@ -1,4 +1,10 @@
-body.e{ top=0; margin: 300px; background: url("CV.jpeg") no-repeat center center fixed; background-size: cover; font-family:pacifico; }
+body.e {
+  top: 0;
+  margin: 300px; 
+  background: url("CV.jpeg") no-repeat center center fixed;
+  background-size: cover; 
+  font-family: 'Pacifico', cursive;
+}
 h1 { top:0 position: fixed; font-family:Georgia; color: powderblue; font-size:40px; } 
 h1.a { position: fixed; font-family:Georgia; color: powderblue; font-size:40px; }
 h1.b { position: fixed; font-family:Georgia; color: powderblue; font-size:40px; } 
