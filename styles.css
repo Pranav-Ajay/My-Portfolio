@@ -1,6 +1,7 @@
 body.e {
   margin: 0;      
   padding: 0;
+  center:0;
   background: url("CV.jpeg") no-repeat center center fixed;
   background-size: cover; 
   font-family: 'Pacifico', cursive;
