@@ -1,8 +1,4 @@
-body.e {
-  margin: 0;      
-  padding: 0;
-  display: flex;              /* enable flexbox */
-  align-items: center;        /* center vertically */
+body.e {    /* center vertically */
   min-height: 100vh;          /* full viewport height */
   background: url("CV.jpeg") no-repeat center center fixed;
   background-size: cover; 
