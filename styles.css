@@ -1,15 +1,15 @@
-body.e{ top=0; margin: 300px; background: url("CV.jpeg") no-repeat center center fixed; background-size: cover; font-family:pacifico }
-h1 { top:0 position: fixed; font-family:Georgia; color: powderblue; font-size:40px } 
-h1.a { top:0 position: fixed; font-family:Georgia; color: powderblue; font-size:40px }
-h1.b { position: fixed; font-family:Georgia; color: powderblue; font-size:40px } 
-h1.c { position: fixed; font-family:Georgia; color: powderblue; font-size:40px } 
+body.e{ top=0; margin: 300px; background: url("CV.jpeg") no-repeat center center fixed; background-size: cover; font-family:pacifico; }
+h1 { top:0 position: fixed; font-family:Georgia; color: powderblue; font-size:40px; } 
+h1.a { top:0 position: fixed; font-family:Georgia; color: powderblue; font-size:40px; }
+h1.b { position: fixed; font-family:Georgia; color: powderblue; font-size:40px; } 
+h1.c { position: fixed; font-family:Georgia; color: powderblue; font-size:40px; } 
 img{ position: fixed; bottom: 0; right: 0; }
 body{ margin: 0; position:fixed; height: 100%; background: url("CVS.jpeg") no-repeat center center fixed; background-size: cover; } 
 a{ position:fixed; bottom:0; display: block; text-align: center; }
 p{ font-size: 30px; color: white; margin-top:150px; } 
-p.d{ font-size: 20px; color: white; position:fixed  }
-p.f{ font-size: 20px; color: white; position:fixed }
-p.g{ font-size: 20px; color: white; position:fixed }
+p.d{ font-size: 20px; color: white; position:fixed;  }
+p.f{ font-size: 20px; color: white; position:fixed;}
+p.g{ font-size: 20px; color: white; position:fixed;}
   
   
   
