@@ -1,5 +1,5 @@
 body.e { 
-  magrin-left:250px
+  magrin-right:250px
   min-height: 100vh;          /* full viewport height */
   background: url("CV.jpeg") no-repeat center center fixed;
   background-size: cover; 
