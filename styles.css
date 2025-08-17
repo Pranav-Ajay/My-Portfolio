@@ -13,6 +13,26 @@ h1 {
     color: powderblue;
     font-size:40px
 }
+
+h2 {
+    top:0
+    position: fixed;  
+    font-family:Georgia; 
+    color: powderblue;
+    font-size:40px
+}
+h3 {
+    position: fixed;  
+    font-family:Georgia; 
+    color: powderblue;
+    font-size:40px
+}
+h4 {
+    position: fixed;  
+    font-family:Georgia; 
+    color: powderblue;
+    font-size:40px
+}
 img{
   position: fixed;  
   bottom: 0;       
