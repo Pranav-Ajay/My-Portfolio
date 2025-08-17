@@ -1,6 +1,6 @@
 body.e{
-  margin: 0;                     
-  height: 100%;                
+  margin: 100px; 
+  padding: 20px;
   background: url("CV.jpeg") no-repeat center center fixed;
   background-size: cover; 
 }
