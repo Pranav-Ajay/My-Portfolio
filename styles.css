@@ -1,4 +1,5 @@
-body.e {    /* center vertically */
+body.e { 
+  text-align:center;/* center vertically */
   min-height: 100vh;          /* full viewport height */
   background: url("CV.jpeg") no-repeat center center fixed;
   background-size: cover; 
