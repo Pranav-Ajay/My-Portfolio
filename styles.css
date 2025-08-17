@@ -7,7 +7,9 @@ img{ position: fixed; bottom: 0; right: 0; }
 body{ margin: 0; position:fixed; height: 100%; background: url("CVS.jpeg") no-repeat center center fixed; background-size: cover; } 
 a{ position:fixed; bottom:0; display: block; text-align: center; }
 p{ font-size: 30px; color: white; margin-top:150px; } 
-p.d{ font-size: 20px; color: white;  }
+p.d{ font-size: 20px; color: white; position:fixed  }
+p.f{ font-size: 20px; color: white; position:fixed }
+p.g{ font-size: 20px; color: white; position:fixed }
   
   
   
