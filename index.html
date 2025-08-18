@@ -11,7 +11,9 @@
       color: white;
       background: url("background.jpg") no-repeat center center fixed;
       background-size: cover;
+      text-align: center; /* centers all content */
     }
+
     #menu-container {
       display: none; /* hidden at first */
       margin-top: 10px;
@@ -26,15 +28,34 @@
       background: #007bff;
       color: white;
     }
+
     #menu-toggle {
       display: block;
-      margin: 10px auto;
+      margin: 20px auto;
       padding: 10px 20px;
       background: #333;
       color: white;
       border: none;
       border-radius: 8px;
       cursor: pointer;
+    }
+
+    /* Overlay for readability */
+    .content {
+      background: rgba(0, 0, 0, 0.6); /* semi-transparent background */
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    .content a {
+      color: #00acee; /* make link visible */
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .content a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -45,20 +66,23 @@
   <!-- Menu will load here -->
   <div id="menu-container"></div>
 
-  <h1>WELCOME</h1>
-  <p>
-    Greetings. I am Pranav Ajay. I am just like a normal person who studies in a university just for the sake of a degree.<br>
-    I am presently in my late teens and on the track of life.<br>
-    This website contains all details regarding me including personal ones.<br>
-    I may be jolly and sometimes weird but I do have some qualifications that I hope will lead me to my goals.<br>
-    The following will lead you to detailed information on me as a student.
-    <br><br>
+  <!-- Main Content -->
+  <div class="content">
+    <h1>WELCOME</h1>
+    <p>
+      Greetings. I am Pranav Ajay. I am just like a normal person who studies in a university just for the sake of a degree.<br>
+      I am presently in my late teens and on the track of life.<br>
+      This website contains all details regarding me including personal ones.<br>
+      I may be jolly and sometimes weird but I do have some qualifications that I hope will lead me to my goals.<br>
+      The following will lead you to detailed information on me as a student.
+    </p>
+    <br>
     <img src="Photo-removebg-preview.png" width="300" height="300">
     <br><br>
-    <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin" class="z">
+    <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin" target="_blank">
       Linkedin account
     </a>
-  </p>
+  </div>
 
   <script>
     // Load buttons.html content
