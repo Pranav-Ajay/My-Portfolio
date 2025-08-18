@@ -68,22 +68,16 @@
         menuContainer.innerHTML = data;
       });
 
-    // Toggle menu visibility on button click
-    toggleBtn.addEventListener("click", () => {
-      if (menuContainer.style.display === "block") {
-        menuContainer.style.display = "none";
-      } else {
-        menuContainer.style.display = "block";
-      }
+    const menuBtn = document.getElementById("menuBtn");
+    const popupMenu = document.getElementById("popupMenu");
+
+    menuBtn.addEventListener("click", () => {
+      popupMenu.style.display = popupMenu.style.display === "block" ? "none" : "block";
     });
 
-    // Close menu if clicked outside
     window.addEventListener("click", (event) => {
-      if (
-        event.target !== toggleBtn &&
-        !menuContainer.contains(event.target)
-      ) {
-        menuContainer.style.display = "none";
+      if (event.target !== menuBtn && !popupMenu.contains(event.target)) {
+        popupMenu.style.display = "none";
       }
     });
   </script>
