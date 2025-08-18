@@ -69,21 +69,25 @@
 
      <p class="d">My senoir secondary projects can be viewed in my project gallery:
            <a href='Jquery.html'>Display gallery</a></p>
-     <script>
-    // Load menu buttons from buttons.html
-    fetch("buttons.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("menu-container").innerHTML = data;
-      });
+    
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const popupMenu = document.getElementById("popupMenu");
 
-    // Toggle menu visibility
-    document.getElementById("menu-toggle").addEventListener("click", function() {
-      const menu = document.getElementById("menu-container");
-      menu.style.display = (menu.style.display === "none" || menu.style.display === "") ? "block" : "none";
+    menuBtn.addEventListener("click", () => {
+      popupMenu.style.display = popupMenu.style.display === "block" ? "none" : "block";
     });
-  </script>
 
+    window.addEventListener("click", (event) => {
+      if (event.target !== menuBtn && !popupMenu.contains(event.target)) {
+        popupMenu.style.display = "none";
+      }
+    });
+
+    function navigateTo(page) {
+      window.location.href = page;
+    }
+  </script>
 
    </body>
 </html>
