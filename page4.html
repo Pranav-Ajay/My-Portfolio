@@ -18,12 +18,15 @@
        <li>Basics of weka</li>
        <li>Basics of javascript</li>
      </ul>  
+      <script>
+    // Load menu.html into this page
+    fetch("buttons.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("menu-container").innerHTML = data;
+      });
+  </script>
    </body>
- <div class="na">
- <a href=page3.html>Page3</a> 
- <a href=Page5.html>Page5</a>
- </div>
-
    <iframe src="buttons.html" width="600" height="100"></iframe>
 </html>
 
