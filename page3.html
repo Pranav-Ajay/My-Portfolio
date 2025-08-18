@@ -89,13 +89,10 @@
         document.getElementById("menu-container").innerHTML = data;
       });
 
-    // Toggle menu visibility
-    document.getElementById("menu-toggle").addEventListener("click", function() {
-      const menu = document.getElementById("menu-container");
-      menu.style.display = (menu.style.display === "none" || menu.style.display === "") 
-        ? "block" 
-        : "none";
-    });
+   // Close menu if click outside
+        window.addEventListener("click", (event) => {
+          if (popupMenu && event.target !== toggleBtn && !popupMenu.contains(event.target)) {
+            popupMenu.style.display = "none";}});
   </script>
 </body>
 </html>
