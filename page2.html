@@ -68,13 +68,7 @@
   </div>
 
   <script>
-    // Load buttons.html content inside the menu container
-    fetch("buttons.html")
-      .then(res => res.text())
-      .then(data => {
-        menuContainer.innerHTML = data;
-      });
-
+   
     const menuBtn = document.getElementById("menuBtn");
     const popupMenu = document.getElementById("popupMenu");
 
@@ -87,6 +81,11 @@
         popupMenu.style.display = "none";
       }
     });
+
+    
+    function navigateTo(page) {
+      window.location.href = page;
+    }
   </script>
 </body>
 </html>
