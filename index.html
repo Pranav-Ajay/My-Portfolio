@@ -13,7 +13,14 @@
     <img src="Photo-removebg-preview.png" width="300" height="300">
     <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin" class=z>Linkedin account</a>
   </p>
- <a href="page2.html">Page2</a>
+   <script>
+    // Load menu.html into this page
+    fetch("buttons.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("menu-container").innerHTML = data;
+      });
+  </script>
 </body>
-<iframe src="buttons.html" width="600" height="100"></iframe>
+
 </html>
