@@ -1,7 +1,7 @@
+<!DOCTYPE html>
 <html>
-  <head><link rel="stylesheet" href="styles.css" type="text/css">
-  <h2>CV</h2>
-   <h3>EDUCATION</h3>
+<head>
+  <link rel="stylesheet" href="styles.css" type="text/css">
   <style>
     #menu-container {
       display: none; /* hide by default */
@@ -29,39 +29,43 @@
     }
   </style>
 </head>
-<body>
+<body class="e">
   <!-- Toggle button -->
   <button id="menu-toggle">☰ Menu</button>
-    <div id="menu-container"></div>
+  <div id="menu-container"></div>
 
-   <body class="e">
-    
-    <table>
-      <tr><th>S.no</th><th>Organization</th><th>Year of graduation</th><th>Grade</th><th>Percentage</th></tr>
-      <tr><td>1</td><td>ICSK senior</td><td>2021</td><td>10th</td><td>97%</td></tr>
-      <tr><td>2</td><td>ICSK senior</td><td>2023</td><td>12th</td><td>80%</td></tr>
-      <tr><td>3</td><td>RSET</td><td>2023-2027</td><td>B.Tech</td><td>7.8 CGPA</td></tr>
-    </table>
-    <h3>SKILLS</h3>
-     <ol>
-      <li>Creativity</li>
-      <li>Empathetic</li>
-      <li>Communication</li>
-      <li>Time management</li>
-      <li>Adaptability</li>
-     <ul>Languages:
-       <li>English</li>
-       <li>Malayalam</li>
-       <li>Hindi</li>
-       <li>Arabic</li>
-     </ul>
-     </ol>
-     <h3>EXPERIENCE</h3>
-      <ol>
-        <li>Internship with Ediglobe</li>
-        <li>Internship with Intrnforte-Ongoing</li>
-      </ol>
-         <script>
+  <h2>CV</h2>
+  <h3>EDUCATION</h3>
+
+  <table>
+    <tr><th>S.no</th><th>Organization</th><th>Year of graduation</th><th>Grade</th><th>Percentage</th></tr>
+    <tr><td>1</td><td>ICSK senior</td><td>2021</td><td>10th</td><td>97%</td></tr>
+    <tr><td>2</td><td>ICSK senior</td><td>2023</td><td>12th</td><td>80%</td></tr>
+    <tr><td>3</td><td>RSET</td><td>2023-2027</td><td>B.Tech</td><td>7.8 CGPA</td></tr>
+  </table>
+
+  <h3>SKILLS</h3>
+  <ol>
+    <li>Creativity</li>
+    <li>Empathetic</li>
+    <li>Communication</li>
+    <li>Time management</li>
+    <li>Adaptability</li>
+    <ul>Languages:
+      <li>English</li>
+      <li>Malayalam</li>
+      <li>Hindi</li>
+      <li>Arabic</li>
+    </ul>
+  </ol>
+
+  <h3>EXPERIENCE</h3>
+  <ol>
+    <li>Internship with Ediglobe</li>
+    <li>Internship with Internforte - Ongoing</li>
+  </ol>
+
+  <script>
     // Load menu buttons from buttons.html
     fetch("buttons.html")
       .then(res => res.text())
@@ -72,11 +76,10 @@
     // Toggle menu visibility
     document.getElementById("menu-toggle").addEventListener("click", function() {
       const menu = document.getElementById("menu-container");
-      menu.style.display = (menu.style.display === "none" || menu.style.display === "") ? "block" : "none";
+      menu.style.display = (menu.style.display === "none" || menu.style.display === "") 
+        ? "block" 
+        : "none";
     });
   </script>
-
-
-   </body>
-   
+</body>
 </html>
