@@ -1,12 +1,99 @@
-<div>
-  <table>
-    <tr>
-      <th><button id="my_button1">ABOUT ME</button></th>
-      <th><button id="my_button2">CV</button></th>
-      <th><button id="my_button3">ACADEMICS</button></th>
-      <th><button id="my_button4">PROJECTS</button></th>
-      <th><button id="my_button5">FEEDBACK</button></th>
-      <th><button id="my_button6">WEATHER</button></th>
-    </tr>
-  </table>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popup Menu Example</title>
+  <style>
+
+    #menuBtn {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .popup-menu {
+      display: none;
+      position: absolute;
+      top: 50px;
+      left: 20px;
+      background: #f9f9f9;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+      padding: 10px;
+    }
+
+    .popup-menu button {
+      display: block;
+      width: 100%;
+      margin: 5px 0;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+
+    .popup-menu button:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="menuBtn">☰ Menu</button>
+
+  <div class="popup-menu" id="popupMenu">
+    <button onclick=gotoabout()>About Me</button>
+    <button onclick=CV()>CV</button>
+    <button onclick=aca()>Academics&Skills</button>
+    <button onclick=project()>Projects</button>
+    <button onclick=feedback()>Feedback</button>
+    <button onclick=weather()>Weather</button>
+    
+  </div>
+
+  <script>
+    // Toggle popup visibility
+    const menuBtn = document.getElementById("menuBtn");
+    const popupMenu = document.getElementById("popupMenu");
+
+    menuBtn.addEventListener("click", () => {
+      popupMenu.style.display =
+        popupMenu.style.display === "block" ? "none" : "block";
+    });
+
+    window.addEventListener("click", (event) => {
+      if (event.target !== menuBtn && !popupMenu.contains(event.target)) {
+        popupMenu.style.display = "none";
+              
+     });
+
+    function gotoabout(){
+         window.location.href = "page2.html";
+      }
+    function CV(){
+         window.location.href = "page3.html";
+      }
+    function aca(){
+         window.location.href = "page4.html";
+      }
+    function project(){
+         window.location.href = "page5.html";
+      }
+    function feedback(){
+         window.location.href = "page6.html";
+      }
+     function weather(){
+         window.location.href = "weather.html"'
+      }
+
+  </script>
+
+</body>
+</html>
