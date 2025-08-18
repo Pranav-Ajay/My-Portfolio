@@ -60,14 +60,22 @@
         <li>Internship with Ediglobe</li>
         <li>Internship with Intrnforte-Ongoing</li>
       </ol>
-       <script>
-    // Load menu.html into this page
+         <script>
+    // Load menu buttons from buttons.html
     fetch("buttons.html")
       .then(res => res.text())
       .then(data => {
         document.getElementById("menu-container").innerHTML = data;
       });
+
+    // Toggle menu visibility
+    document.getElementById("menu-toggle").addEventListener("click", function() {
+      const menu = document.getElementById("menu-container");
+      menu.style.display = (menu.style.display === "none" || menu.style.display === "") ? "block" : "none";
+    });
   </script>
+
+
    </body>
    
 </html>
