@@ -1,7 +1,4 @@
-<button id="menuBtn">☰ Menu</button>
-
-<!-- Popup Menu -->
-<div id="popupMenu" class="menu" style="display: none;">
+<div id="popupMenu" class="menu">
   <button onclick="navigateTo('about.html')">About Me</button>
   <button onclick="navigateTo('cv.html')">CV</button>
   <button onclick="navigateTo('academics.html')">Academics & Skills</button>
@@ -11,19 +8,6 @@
 </div>
 
 <script>
-  const menuBtn = document.getElementById("menuBtn");
-  const popupMenu = document.getElementById("popupMenu");
-
-  menuBtn.addEventListener("click", () => {
-    popupMenu.style.display = popupMenu.style.display === "block" ? "none" : "block";
-  });
-
-  window.addEventListener("click", (event) => {
-    if (event.target !== menuBtn && !popupMenu.contains(event.target)) {
-      popupMenu.style.display = "none";
-    }
-  });
-
   function navigateTo(page) {
     window.location.href = page;
   }
