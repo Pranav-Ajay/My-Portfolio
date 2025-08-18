@@ -82,17 +82,22 @@
   </ol>
 
   <script>
-    // Load menu buttons from buttons.html
-    fetch("buttons.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("menu-container").innerHTML = data;
-      });
+    const menuBtn = document.getElementById("menuBtn");
+    const popupMenu = document.getElementById("popupMenu");
 
-   // Close menu if click outside
-        window.addEventListener("click", (event) => {
-          if (popupMenu && event.target !== toggleBtn && !popupMenu.contains(event.target)) {
-            popupMenu.style.display = "none";}});
+    menuBtn.addEventListener("click", () => {
+      popupMenu.style.display = popupMenu.style.display === "block" ? "none" : "block";
+    });
+
+    window.addEventListener("click", (event) => {
+      if (event.target !== menuBtn && !popupMenu.contains(event.target)) {
+        popupMenu.style.display = "none";
+      }
+    });
+
+    function navigateTo(page) {
+      window.location.href = page;
+    }
   </script>
 </body>
 </html>
