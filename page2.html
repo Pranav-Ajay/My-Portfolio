@@ -5,41 +5,42 @@
   <title>About Me - Pranav Ajay</title>
   <link rel="stylesheet" href="styles.css" type="text/css" />
   <style>
-    #menu-toggle {
-      position: absolute;
-      top: 10px;
-      left: 10px;
+    #menuBtn {
+      position:absolute;
+      display: block;
+      left:100%;
+      top:0;
       padding: 10px 20px;
       background: #333;
       color: white;
       border: none;
       border-radius: 8px;
       cursor: pointer;
-      z-index: 1000;
     }
-    #menu-container {
-      position: absolute;
-      top: 50px; /* just below the toggle button */
-      left: 10px;
+
+    /* Menu Box */
+    #popupMenu {
+      position:absolute;
+      display: none;
+      left:100%;
+      top:0;
+      text-align: center;
       background: #f0f0f0;
       border: 1px solid #ccc;
-      border-radius: 10px;
       padding: 10px;
+      border-radius: 10px;
       width: fit-content;
-      display: none;
-      text-align: center;
-      z-index: 999;
     }
-    #menu-container button {
-      display: block;
-      margin: 5px 0;
-      padding: 10px 15px;
+
+    /* Individual Menu Buttons */
+    #popupMenu button {
+      margin: 5px;
       border: none;
       border-radius: 8px;
       background: #007bff;
       color: white;
       cursor: pointer;
-      width: 100%;
+      display: block;
     }
   </style>
 </head>
