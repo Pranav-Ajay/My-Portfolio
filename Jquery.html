@@ -5,12 +5,42 @@
   <title>Interactive Projects Gallery</title>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <style>
-    body { font-family: Arial, sans-serif; padding: 20px; }
-    .gallery { display: flex; gap: 10px; }
-    .thumbnail { width: 100px; height: 100px; cursor: pointer; border: 2px solid #ccc; }
-    #main-display img { width: 300px; height: 200px; border: 3px solid #333; }
-    #main-display h2 { margin: 10px 0 5px; }
-    #main-display p { margin: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .gallery {
+      display: flex;
+      gap: 10px;
+    }
+    .thumbnail {
+      width: 100px;
+      height: 100px;
+      cursor: pointer;
+      border: 2px solid #ccc;
+      text-align: center;
+    }
+    .thumbnail img {
+      width: 100%;
+      height: 70px;
+      object-fit: cover;
+    }
+    .thumbnail a {
+      display: block;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+    #main-display img {
+      width: 300px;
+      height: 200px;
+      border: 3px solid #333;
+    }
+    #main-display h2 {
+      margin: 10px 0 5px;
+    }
+    #main-display p {
+      margin: 0;
+    }
   </style>
 </head>
 <body>
@@ -28,32 +58,40 @@
 
   <!-- Thumbnails -->
   <div class="gallery">
-    <div class="Board project" 
-         data-title="My class 12 chemistry project."
-         data-description="My class 12 chemistry project." 
-         <img src="P1.jpeg">
-         <a href="CHEMISTRY PROJECT 2022-2023sadad.pdf" target="_blank">Open Project PDF</a>
+
+    <!-- Chemistry Project -->
+    <div class="thumbnail"
+         data-title="Chemistry Project"
+         data-description="My class 12 chemistry project."
+         data-image="P1.jpeg">
+      <img src="P1.jpeg" alt="Chemistry">
+      <a href="CHEMISTRY PROJECT 2022-2023sadad.pdf" target="_blank">Open PDF</a>
     </div>
 
-    <div class="Board project" 
-         data-title="My class 12 biology project" 
-         data-description="My class 12 biology project" 
-         <img src="P2.jpeg">
-         <a href="BIOLOGY INVESTIGATORY PROJECT.pdf" target="_blank">Open Project PDF</a>
+    <!-- Biology Project -->
+    <div class="thumbnail"
+         data-title="Biology Project"
+         data-description="My class 12 biology project"
+         data-image="P2.jpeg">
+      <img src="P2.jpeg" alt="Biology">
+      <a href="BIOLOGY INVESTIGATORY PROJECT.pdf" target="_blank">Open PDF</a>
     </div>
 
-    <div class="thumbnail" 
-         data-title="Blog Platform" 
-         data-description="A platform for posting and managing blog articles." 
+    <!-- Blog Platform -->
+    <div class="thumbnail"
+         data-title="Blog Platform"
+         data-description="A platform for posting and managing blog articles."
          data-image="https://via.placeholder.com/300x200/7fff7f/000?text=Blog">
-      <img src="https://via.placeholder.com/100x100/7fff7f/000?text=3" alt="">
+      <img src="https://via.placeholder.com/100x100/7fff7f/000?text=3" alt="Blog">
+      <a href="#" onclick="alert('No file linked for this project')">Open PDF</a>
     </div>
+
   </div>
 
   <!-- jQuery Script -->
   <script>
-    $(document).ready(function() {
-      $(".thumbnail").click(function() {
+    $(document).ready(function () {
+      $(".thumbnail").click(function () {
         // Get data attributes from clicked thumbnail
         var title = $(this).data("title");
         var desc = $(this).data("description");
