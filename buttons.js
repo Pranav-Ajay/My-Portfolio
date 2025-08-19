@@ -1,4 +1,4 @@
-const apiKey = "abc123def456ghi789";
+const apiKey = "0d7d0ea42cade75534014734740c6f41"
 
     document.getElementById("get-weather").addEventListener("click", () => {
       const city = document.getElementById("city-input").value.trim();
