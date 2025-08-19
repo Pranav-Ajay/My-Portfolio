@@ -39,16 +39,7 @@ iframe{
   left:50%;
   top:10px;
   }
-table.x {
-  position: fixed;   /* keeps it in place */
-  margin-top:400px;    /* move it up from bottom */
-  left: 20px;        /* align to left side */
-  z-index: 1000;     /* keep above background */
-}
 
-table.x td {
-  padding: 5px;      /* space between icons */
-}
 
 
   
