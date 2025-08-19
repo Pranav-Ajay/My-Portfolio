@@ -40,9 +40,10 @@ iframe{
   top:10px;
   }
 table.x{
-  position:relative;
-  margin-left:10%;
-  margin-bottom:600px;
+  display: block;
+  margin-top: 20px;
+  margin-left: 0;
+}
 }
 
   
