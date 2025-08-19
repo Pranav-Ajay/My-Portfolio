@@ -41,7 +41,7 @@ iframe{
   }
 table.x {
   position: fixed;   /* keeps it in place */
-  bottom: 20px;      /* move it up from bottom */
+  margin-top:400px;    /* move it up from bottom */
   left: 20px;        /* align to left side */
   z-index: 1000;     /* keep above background */
 }
