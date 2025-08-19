@@ -40,10 +40,14 @@ iframe{
   top:10px;
   }
 table.x {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  z-index: 1000; 
+  position: fixed;   /* keeps it in place */
+  bottom: 20px;      /* move it up from bottom */
+  left: 20px;        /* align to left side */
+  z-index: 1000;     /* keep above background */
+}
+
+table.x td {
+  padding: 5px;      /* space between icons */
 }
 
 
