@@ -6,7 +6,15 @@
   <link rel="stylesheet" href="styles.css" type="text/css">
   
 <body class="e">
+<div id="buttons-placeholder"></div>
 
+<script>
+  fetch("buttons.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("buttons-placeholder").innerHTML = data;
+    });
+</script>
 
   <h3>Academic Qualifications</h3>
   <table border="1" cellpadding="8">
