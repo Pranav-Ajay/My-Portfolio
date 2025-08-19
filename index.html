@@ -4,65 +4,10 @@
   <meta charset="UTF-8">
   <title>My Portfolio</title>
   <link rel="stylesheet" href="styles.css" type="text/css">
-
-  <style>
-    /* Toggle Button Style */
-    #menuBtn {
-      position:absolute;
-      display: block;
-      left:100%;
-      top:0;
-      padding: 10px 20px;
-      background: #333;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    /* Menu Box */
-    #popupMenu {
-      position:absolute;
-      display: none;
-      left:100%;
-      top:0;
-      text-align: center;
-      background: #f0f0f0;
-      border: 1px solid #ccc;
-      padding: 10px;
-      border-radius: 10px;
-      width: fit-content;
-    }
-
-    /* Individual Menu Buttons */
-    #popupMenu button {
-      margin: 5px;
-      border: none;
-      border-radius: 8px;
-      background: #007bff;
-      color: white;
-      cursor: pointer;
-      display: block;
-    }
-  </style>
 </head>
+
 <body>
 
-  <!-- Toggle Menu Button -->
-  <button id="menuBtn">☰ Menu</button>
-
-  <!-- Menu Buttons -->
-  <div id="popupMenu">
-    <button onclick="navigateTo('page2.html')">About Me</button>
-    <button onclick="navigateTo('page3.html')">CV</button>
-    <button onclick="navigateTo('page4.html')">Academics & Skills</button>
-    <button onclick="navigateTo('Page5.html')">Projects</button>
-    <button onclick="navigateTo('page6.html')">Feedback</button>
-    <button onclick="navigateTo('weather.html')">Weather</button>
-  </div>
-
-  <!-- Main Content -->
-  <div class="content">
     <h1>WELCOME</h1>
     <p>
       Greetings. I am Pranav Ajay. I am just like a normal person who studies in a university just for the sake of a degree.<br>
@@ -77,26 +22,6 @@
     <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin" target="_blank">
       Linkedin account
     </a>
-  </div>
 
-  <!-- JavaScript for Menu Toggle -->
-  <script>
-    const menuBtn = document.getElementById("menuBtn");
-    const popupMenu = document.getElementById("popupMenu");
-
-    menuBtn.addEventListener("click", () => {
-      popupMenu.style.display = popupMenu.style.display === "block" ? "none" : "block";
-    });
-
-    window.addEventListener("click", (event) => {
-      if (event.target !== menuBtn && !popupMenu.contains(event.target)) {
-        popupMenu.style.display = "none";
-      }
-    });
-
-    function navigateTo(page) {
-      window.location.href = page;
-    }
-  </script>
 </body>
 </html>
