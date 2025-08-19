@@ -42,7 +42,7 @@ iframe{
 table.x{
   display: block;
   margin-top: 20px;
-  margin-left: 0;
+  left: 0;
 }
 }
 
