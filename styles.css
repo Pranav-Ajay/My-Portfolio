@@ -39,7 +39,28 @@ iframe{
   left:50%;
   top:10px;
   }
+.social-icons {
+  position: fixed;   /* stays in place even when scrolling */
+  bottom: 20px;      /* distance from bottom */
+  left: 20px;        /* distance from left */
+  z-index: 1000;     /* keeps them above background & photo */
+}
 
+.social-icons a {
+  margin-right: 10px; /* spacing between icons */
+  display: inline-block;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;   /* makes icons circular if square */
+  transition: transform 0.2s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1); /* zoom effect on hover */
+}
 
 
   
