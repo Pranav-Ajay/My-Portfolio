@@ -2,86 +2,138 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Me - Pranav Ajay</title>
-  <link rel="stylesheet" href="styles.css" type="text/css" />
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    /* Menu Button */
     #menuBtn {
-      position:absolute;
-      display: block;
-      left:100%;
-      top:0;
+      position: fixed;
+      top: 10px;
+      right: 10px;
       padding: 10px 20px;
       background: #333;
       color: white;
       border: none;
       border-radius: 8px;
       cursor: pointer;
+      z-index: 1000;
     }
 
-    /* Menu Box */
+    /* Popup Menu */
     #popupMenu {
-      position:absolute;
-      display: none;
-      left:100%;
-      top:0;
-      text-align: center;
+      position: fixed;
+      top: 50px;
+      right: 10px;
       background: #f0f0f0;
       border: 1px solid #ccc;
       padding: 10px;
       border-radius: 10px;
-      width: fit-content;
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      z-index: 999;
     }
 
-    /* Individual Menu Buttons */
+    /* Menu Buttons */
     #popupMenu button {
-      margin: 5px;
+      padding: 10px;
       border: none;
       border-radius: 8px;
       background: #007bff;
       color: white;
       cursor: pointer;
-      display: block;
+      width: 150px;
+      transition: background 0.3s;
+    }
+
+    #popupMenu button:hover {
+      background: #0056b3;
+    }
+
+    /* Show Menu Class */
+    #popupMenu.show {
+      display: flex;
+    }
+
+    /* Content Styling */
+    .content {
+      padding: 80px 20px 20px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1 {
+      margin-top: 40px;
+      color: #333;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 500px) {
+      #popupMenu button {
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Toggle button -->
-    <button id="menuBtn">☰ Menu</button>
-  
+  <!-- Menu Toggle Button -->
+  <button id="menuBtn">☰ Menu</button>
+
+  <!-- Popup Menu -->
   <div id="popupMenu">
     <button onclick="navigateTo('page2.html')">About Me</button>
     <button onclick="navigateTo('page3.html')">CV</button>
     <button onclick="navigateTo('page4.html')">Academics & Skills</button>
-    <button onclick="navigateTo('Page5.html')">Projects</button>
+    <button onclick="navigateTo('page5.html')">Projects</button>
     <button onclick="navigateTo('page6.html')">Feedback</button>
     <button onclick="navigateTo('weather.html')">Weather</button>
   </div>
 
-  
+  <!-- Page Content -->
   <div class="content">
-    <!-- Your content here... -->
     <h1>ABOUT ME</h1>
-     <p> As mentioned earlier, I am Pranav Ajay. I am a 19-year-old teen from Kerala, India and I am presently pursuing my bachelor's degree in Artificial Intelligence and Data Science. I did my entire schooling in Kuwait, which is a country in the GCC. I was born in India and brought up in Kuwait. The lack of exposure to our Indian environment led me to pursue my college education in India. I am on the track of learning my subjects so that I get a chance to contribute something in this vast world. Being brought up in Kuwait doesn't make me feel different as I was amongst our own community or in general the South Asian community in Kuwait. I had studied in an Indian school named <a href="https://en.wikipedia-on-ipfs.org/wiki/Indian_Community_School" target="_blank">ICSK</a>. I was a bio-maths student in my senior secondary. </p> 
+    <p>As mentioned earlier, I am Pranav Ajay. I am a 19-year-old teen from Kerala, India...</p>
+
     <h1>PERSONAL INTEREST</h1>
-    <p> Ever since kindergarten, I have been developing many interests in various domains like art, building, etc. When I became a teen, I started developing interests in learning more about AI as I remember the word AI being used frequently by lecturers, people giving seminars, workshops, and even our faculty in motivational and career talks. Though I didn't learn a subject related to AI in my senior secondary, I took part-time courses relating to various programming languages in order to develop an understanding of how AI works. I have great interest in statistics and web design. I am grasping the fundamentals of HTML, CSS & JavaScript. Regarding non-academic interests, I love to bake, play video games, and play sports like cricket and badminton. </p>
+    <p>Ever since kindergarten, I have been developing many interests in various domains...</p>
+
     <h1>CAREER GOALS</h1>
-    <p> My main ambition was to get a job in the field of bioinformatics. Ever since I joined college, my interest has been shifting a bit to statistics. I just love playing with data. Since I also know some programming languages, I would presently prefer a career as a data scientist or a data analyst. Maybe just a statistician too. My interest keeps changing based on anything new I encounter. It might not sound appealing, but in today's world people keep switching their professions at one point of their life. Hence, there is some thrill in our life. My present goal is to get a decent CGPA, go for higher studies, and then focus on a good type of profession. </p>
+    <p>My main ambition was to get a job in the field of bioinformatics...</p>
   </div>
 
   <script>
     const menuBtn = document.getElementById("menuBtn");
     const popupMenu = document.getElementById("popupMenu");
 
+    // Toggle menu
     menuBtn.addEventListener("click", () => {
-      popupMenu.style.display = popupMenu.style.display === "block" ? "none" : "block";
+      popupMenu.classList.toggle("show");
     });
 
+    // Close menu if clicked outside
     window.addEventListener("click", (event) => {
       if (event.target !== menuBtn && !popupMenu.contains(event.target)) {
-        popupMenu.style.display = "none";
+        popupMenu.classList.remove("show");
       }
     });
 
+    // Navigate function
     function navigateTo(page) {
       window.location.href = page;
     }
