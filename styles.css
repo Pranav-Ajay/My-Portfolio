@@ -1,5 +1,5 @@
 body.e {
-  margin: 0 300px;  /* 0 top/bottom, 250px left/right */
+  margin: 0 500px;  /* 0 top/bottom, 250px left/right */
   min-height: 100vh;
   background: url("CV.jpeg") no-repeat center center fixed;
   background-size: cover; 
