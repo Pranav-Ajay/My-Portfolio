@@ -39,12 +39,13 @@ iframe{
   left:50%;
   top:10px;
   }
-table.x{
-  display:absolute;
-  margin-top: 20px;
-  left: 0;
+table.x {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000; 
 }
-}
+
 
   
   
