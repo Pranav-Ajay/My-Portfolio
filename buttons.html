@@ -1,38 +1,22 @@
 <div>
   <table>
     <tr>
-      <td><button id="my_button1">ABOUT ME</button></td>
-      <td><button id="my_button2">CV</button></td>
-      <td><button id="my_button3">ACADEMICS</button></td>
-      <td><button id="my_button4">PROJECTS</button></td>
-      <td><button id="my_button5">FEEDBACK</button></td>
-      <td><button id="my_button6">WEATHER</button></td>
+      <td><type="button" onclick="window.location.href='page2.html'">ABOUT ME</button></td>
+      <td><type="button" onclick="window.location.href='page3.html'">CV</button></td>
+      <td><type="button" onclick="window.location.href='page4.html'">ACADEMICS</button></td>
+      <td><type="button" onclick="window.location.href='Page5.html'">PROJECTS</button></td>
+      <td><type="button" onclick="window.location.href='page6.html'">FEEDBACK</button></td>
+      <td><type="button" onclick="window.location.href='weather.html'">WEATHER</button></td>
   </tr>
   </table>
 </div>
 
 <script>
- <div id="content_area">
-  <div id="about" class="content" style="display: none;">This is the About Me section.</div>
-  <div id="cv" class="content" style="display: none;">This is the CV section.</div>
-  <div id="academics" class="content" style="display: none;">This is the Academics section.</div>
-  <div id="projects" class="content" style="display: none;">This is the Projects section.</div>
-  <div id="feedback" class="content" style="display: none;">This is the Feedback section.</div>
-  <div id="weather" class="content" style="display: none;">This is the Weather section.</div>
-</div>
-
-<script>
-  function showSection(id) {
-    document.querySelectorAll(".content").forEach(div => {
-      div.style.display = "none";
-    });
-    document.getElementById(id).style.display = "block";
-  }
-
-  document.getElementById("my_button1").addEventListener("click", () => showSection("about"));
-  document.getElementById("my_button2").addEventListener("click", () => showSection("cv"));
-  document.getElementById("my_button3").addEventListener("click", () => showSection("academics"));
-  document.getElementById("my_button4").addEventListener("click", () => showSection("projects"));
-  document.getElementById("my_button5").addEventListener("click", () => showSection("feedback"));
-  document.getElementById("my_button6").addEventListener("click", () => showSection("weather"));
+function MyButton() {
+  return (
+    <button onClick={() => alert('Button clicked!')}>
+      Click Me
+    </button>
+  );
+}
 </script>
