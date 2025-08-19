@@ -40,7 +40,7 @@ iframe{
   top:10px;
   }
 table.x{
-  display: block;
+  display:absolute;
   margin-top: 20px;
   left: 0;
 }
