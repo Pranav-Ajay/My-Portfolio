@@ -12,27 +12,27 @@
 </div>
 
 <script>
-  document.getElementById("my_button1").addEventListener("click", function() {
-    window.location.href = "page2.html";
-  });
+ <div id="content_area">
+  <div id="about" class="content" style="display: none;">This is the About Me section.</div>
+  <div id="cv" class="content" style="display: none;">This is the CV section.</div>
+  <div id="academics" class="content" style="display: none;">This is the Academics section.</div>
+  <div id="projects" class="content" style="display: none;">This is the Projects section.</div>
+  <div id="feedback" class="content" style="display: none;">This is the Feedback section.</div>
+  <div id="weather" class="content" style="display: none;">This is the Weather section.</div>
+</div>
 
-  document.getElementById("my_button2").addEventListener("click", function() {
-    window.location.href = "page3.html";
-  });
+<script>
+  function showSection(id) {
+    document.querySelectorAll(".content").forEach(div => {
+      div.style.display = "none";
+    });
+    document.getElementById(id).style.display = "block";
+  }
 
-  document.getElementById("my_button3").addEventListener("click", function() {
-    window.location.href = "page4.html";
-  });
-
-  document.getElementById("my_button4").addEventListener("click", function() {
-    window.location.href = "page5.html";
-  });
-
-  document.getElementById("my_button5").addEventListener("click", function() {
-    window.location.href = "page6.html";
-  });
-
-  document.getElementById("my_button6").addEventListener("click", function() {
-    window.location.href = "weather.html";
-  });
+  document.getElementById("my_button1").addEventListener("click", () => showSection("about"));
+  document.getElementById("my_button2").addEventListener("click", () => showSection("cv"));
+  document.getElementById("my_button3").addEventListener("click", () => showSection("academics"));
+  document.getElementById("my_button4").addEventListener("click", () => showSection("projects"));
+  document.getElementById("my_button5").addEventListener("click", () => showSection("feedback"));
+  document.getElementById("my_button6").addEventListener("click", () => showSection("weather"));
 </script>
