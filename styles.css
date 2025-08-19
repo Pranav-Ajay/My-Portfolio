@@ -1,5 +1,5 @@
 body.e {
-  margin: 0 300px;  /* 0 top/bottom, 250px left/right */
+  margin: 0 300px;  
   min-height: 100vh;
   background: url("CV.jpeg") no-repeat center center fixed;
   background-size: cover; 
@@ -15,7 +15,7 @@ body{  margin: 0; padding: 0; position:fixed; height: 100%; background: url("CVS
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 50px; /* spacing between links */
+  gap: 50px; 
 }
 
 .nav a {
