@@ -4,63 +4,9 @@
   <meta charset="UTF-8">
   <title>Academic Portfolio</title>
   <link rel="stylesheet" href="styles.css" type="text/css">
-  <style>
-    #menuBtn {
-      position:absolute;
-      display: block;
-      left:100%;
-      top:0;
-      padding: 10px 20px;
-      background: #333;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    /* Menu Box */
-    #popupMenu {
-      position:absolute;
-      display: none;
-      left:100%;
-      top:0;
-      text-align: center;
-      background: #f0f0f0;
-      border: 1px solid #ccc;
-      padding: 10px;
-      border-radius: 10px;
-      width: fit-content;
-    }
-
-    /* Individual Menu Buttons */
-    #popupMenu button {
-      margin: 5px;
-      border: none;
-      border-radius: 8px;
-      background: #007bff;
-      color: white;
-      cursor: pointer;
-      display: block;
-    }
-  </style>
-</head>
-<body>
-  </style>
-</head>
+  
 <body class="e">
 
-  <!-- Toggle button -->
-  <button id="menu-toggle">☰ Menu</button>
-    <div id="popupMenu">
-    <button onclick="navigateTo('page2.html')">About Me</button>
-    <button onclick="navigateTo('page3.html')">CV</button>
-    <button onclick="navigateTo('page4.html')">Academics & Skills</button>
-    <button onclick="navigateTo('Page5.html')">Projects</button>
-    <button onclick="navigateTo('page6.html')">Feedback</button>
-    <button onclick="navigateTo('weather.html')">Weather</button>
-  </div>
-
-  <div id="menu-container"></div>
 
   <h3>Academic Qualifications</h3>
   <table border="1" cellpadding="8">
@@ -85,25 +31,6 @@
     <li>Basics of JavaScript</li>
   </ul>
 
-
-  <script>
-    const menuBtn = document.getElementById("menuBtn");
-    const popupMenu = document.getElementById("popupMenu");
-
-    menuBtn.addEventListener("click", () => {
-      popupMenu.style.display = popupMenu.style.display === "block" ? "none" : "block";
-    });
-
-    window.addEventListener("click", (event) => {
-      if (event.target !== menuBtn && !popupMenu.contains(event.target)) {
-        popupMenu.style.display = "none";
-      }
-    });
-
-    function navigateTo(page) {
-      window.location.href = page;
-    }
-  </script>
 
 </body>
 </html>
